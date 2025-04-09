@@ -1,35 +1,79 @@
-# Moon UI 组件库开发需求
+# Moon UI
 
-## 项目目标
-- 构建一套基于 Vue 3 的UI组件库，命名为 Moon UI
-- 组件库应符合现代设计标准，提供良好的开发体验
-- 最终产品可发布至 npm 供其他项目使用
+A modern UI component library built with Vue 3, TypeScript, and Vite.
 
-## 技术栈要求
-- Vue 3 作为基础框架
-- TypeScript 用于类型定义和代码规范
-- Vite 作为构建工具
-- pnpm 作为包管理器
+## Features
 
-## 项目结构
-- 采用 monorepo 结构管理多个包
-- 核心组件包需包含常用UI组件
-- 文档站点包用于展示和演示组件
+- 🚀 Based on Vue 3, TypeScript and Vite
+- 📦 Tree-shakable ESM build
+- 🎨 Customizable themes
+- 📄 Detailed documentation
+- 🧪 Thoroughly tested components
 
-## 组件规范
-- 组件需支持按需引入
-- 提供完整的 TypeScript 类型定义
-- 所有组件需有详细文档和使用示例
-- 应支持主题定制
+## Installation
 
-## 开发流程
-- 使用 ESLint 和 Prettier 保证代码质量
-- 编写单元测试确保组件稳定性
-- 使用语义化版本控制
-- 提供明确的贡献指南
+```bash
+# Using npm
+npm install moon-ui
 
-## 交付物
-- 完整源代码及构建配置
-- 打包后的组件库，可直接发布至 npm
-- 完整的组件使用文档
-- 演示网站展示所有组件功能
+# Using yarn
+yarn add moon-ui
+
+# Using pnpm
+pnpm add moon-ui
+```
+
+## Usage
+
+### Full Import
+
+```js
+import { createApp } from 'vue'
+import MoonUI from 'moon-ui'
+import 'moon-ui/dist/style.css'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(MoonUI)
+app.mount('#app')
+```
+
+### On-demand Import
+
+```js
+import { createApp } from 'vue'
+import { Button, Input } from 'moon-ui'
+import 'moon-ui/dist/style.css'
+import App from './App.vue'
+
+const app = createApp(App)
+app.use(Button)
+app.use(Input)
+app.mount('#app')
+```
+
+## Development
+
+```bash
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build component library
+pnpm build
+
+# Run tests
+pnpm test
+```
+
+## Project Structure
+
+- `packages/components` - UI components source code
+- `packages/docs` - Documentation site
+- `examples` - Example usage projects
+
+## License
+
+MIT

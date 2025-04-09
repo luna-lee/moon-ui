@@ -1,0 +1,22 @@
+{
+  "name": "moon-ui",
+  "version": "0.1.0",
+  "description": "A modern Vue 3 UI component library",
+  "private": true,
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "pnpm -r --filter=./packages/* run dev",
+    "build": "pnpm -r --filter=./packages run build",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "format": "prettier --write \"**/*.{vue,ts,js,json,md}\"",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "component",
+    "ui",
+    "typescript"
+  ]
+}
