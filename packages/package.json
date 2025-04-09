@@ -14,11 +14,13 @@
     "./client": {
       "types": "./types/global.d.ts"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css"
   },
   "typesVersions": {
     "*": {
-      "client": ["./types/global.d.ts"]
+      "client": [
+        "./types/global.d.ts"
+      ]
     }
   },
   "files": [
@@ -27,9 +29,10 @@
   ],
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "build": "rm -rf dist types && vite build && npm run build:types",
     "build:types": "vue-tsc --emitDeclarationOnly &&  node --loader ts-node/esm scripts/generateTypes.mts",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "vue-tsc --noEmit",
+    "clean": "rm -rf dist types"
   },
   "peerDependencies": {
     "vue": "^3.5.0"
