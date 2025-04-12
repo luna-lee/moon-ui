@@ -10,6 +10,9 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "types": [
+      "vite/client"
+    ],
     "skipLibCheck": true,
     "moduleResolution": "node", // 改为 node
     "allowImportingTsExtensions": false, // 改为 false

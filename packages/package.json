@@ -38,12 +38,13 @@
     "vue": "^3.5.0"
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
     "@vitejs/plugin-vue": "^5.0.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
     "vite": "^5.1.4",
     "vue": "^3.5.1",
-    "vue-tsc": "^2.0.4",
-    "ts-node": "^10.9.2"
+    "vue-tsc": "^2.0.4"
   },
   "keywords": [
     "vue",
@@ -53,5 +54,8 @@
     "typescript"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "moon-utils": "^2.0.2"
+  }
 }

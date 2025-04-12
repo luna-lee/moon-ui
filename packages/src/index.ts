@@ -1,11 +1,11 @@
 import type { App } from "vue";
 
 // Import components
-import MButton from "./button/Button.vue";
+import MHierarchy from "./MoonHierarchy/index.vue";
 
 // Create component map
 const components = {
-  MButton,
+  MHierarchy,
 };
 
 // Plugin installation
@@ -21,7 +21,7 @@ export const MoonUI = {
 };
 
 // Export components individually
-export { MButton };
+export { MHierarchy };
 
 // For backward compatibility
 export default MoonUI;
